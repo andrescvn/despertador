@@ -18,15 +18,15 @@ public class Display {
     /**
      * show the hour
      */
-    public static void showHr(int hora, int minutos) {
-        System.out.println(hora+":"+minutos);
+    public static void showHr() {
+        System.out.println(Reloj.hora.getHour()+":"+Reloj.hora.getMinute());
     }
 
     /**
      * show the alarm hour
      */
-    public static void showAlarm(int hora, int minutos) {
-        System.out.println(hora+":"+minutos);
+    public static void showAlarm() {
+        System.out.println(Reloj.alarma.getHour()+":"+Reloj.alarma.getMinute());
     }
 
     /**

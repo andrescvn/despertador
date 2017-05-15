@@ -13,13 +13,13 @@ import java.time.LocalTime;
  */
 public class Reloj {
 
-   static LocalTime hora, alarma;
-   static int horas=hora.getHour();
-   static int minutos=hora.getMinute();
+  public static LocalTime hora=LocalTime.of(03, 00);
+  public static LocalTime alarma;
+
     /**+
      * menu
      */
-    public void main() {
+    public void main() { 
 
     }
 

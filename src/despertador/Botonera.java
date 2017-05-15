@@ -5,6 +5,8 @@
  */
 package despertador;
 
+import java.time.LocalTime;
+
 /**
  * interfaz methods
  *
@@ -34,8 +36,7 @@ public class Botonera {
      */
     public static void configHr() {
         Display.showLED(true, false, true);
-        Display.showAlarm(Reloj.horas,Reloj.minutos);
-
+        Display.showHr();
     }
 
     /**
@@ -43,26 +44,26 @@ public class Botonera {
      */
     public static void configAlarm() {
         Display.showLED(false, true, true);
-        Display.showHr(Reloj.horas,Reloj.minutos);
+        Display.showAlarm();
     }
 
     /**
      * increase the hour
      */
-    public void plusHr(int hora) {
-        if(Display.ledclock==true ||Display.ledalarm==true){
-        hora++;
-       
+    public static void plusMin() {
+        if (Display.ledset == true) {
+            Reloj.hora=Reloj.hora.plusMinutes(1);
+            Display.showHr();
         }
-
     }
 
     /**
      * increase the minutes
      */
-    public void plusMin(int minutos) {
-        if(Display.ledclock==true ||Display.ledalarm==true){
-        minutos++;
+    public static void plushr() {
+        if (Display.ledset == true) {
+            Reloj.hora=Reloj.hora.plusHours(1);
+            Display.showHr();
         }
     }
 

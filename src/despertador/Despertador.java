@@ -16,8 +16,10 @@ public class Despertador {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Reloj reloj = new Reloj();
-        reloj.main();
+        Botonera bot = new Botonera();
+        Display.showHr();
+        Botonera.configHr();
+        Botonera.plusMin();
     }
-    
+
 }

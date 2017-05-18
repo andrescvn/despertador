@@ -18,8 +18,10 @@ public class Display {
     /**
      * show the hour
      */
-    public static void showHr() {
-        System.out.println(Reloj.hora.getHour()+":"+Reloj.hora.getMinute());
+    public static void showHr() {   
+        System.out.println(LocalTime.now().getHour()+Reloj.hora.getHour()+":"+
+                (LocalTime.now().getMinute()+Reloj.hora.getMinute())+
+                ":"+ LocalTime.now().getSecond());
     }
 
     /**

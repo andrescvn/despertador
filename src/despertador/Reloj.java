@@ -27,17 +27,17 @@ public class Reloj {
      */
     public void main() {
         hora = LocalTime.of(0, 0);
-        alarma=LocalTime.of(9,58);
+        alarma = LocalTime.of(9, 58);
         Boolean quedarse = true;
         Timer timer = new Timer();
         TimerTask task;
         task = new TimerTask() {
             @Override
             public void run() {
-                if (alarma.getHour() == (LocalTime.now().getHour()+hora.getHour())
-                        && alarma.getMinute() == (LocalTime.now().getMinute()+hora.getMinute())
+                if (alarma.getHour() == (LocalTime.now().getHour() + hora.getHour())
+                        && alarma.getMinute() == (LocalTime.now().getMinute() + hora.getMinute())
                         && Botonera.alarmActive == true
-                        && Altavoz.ringON==true) {
+                        && Altavoz.ringON == true) {
                     Altavoz.playSound();
                 } else {
                     Display.showHr();
@@ -47,11 +47,13 @@ public class Reloj {
         timer.schedule(task, 10, 10000);
         do {
             int option = Integer.parseInt(JOptionPane.showInputDialog(" 1) Alarma on\n 2) Alarma off \n 3) Configurar hora \n 4) Configurar Alarma \n 5) Parar alarma \n 6) Salir"
-                    ));
+            ));
             switch (option) {
-                case 1:Botonera.alarmON();
+                case 1:
+                    Botonera.alarmON();
                     break;
-                case 2:Botonera.alarmOFF();
+                case 2:
+                    Botonera.alarmOFF();
                     break;
                 case 3:
                     Botonera.configHr();
@@ -63,7 +65,7 @@ public class Reloj {
                     Botonera.stopAlarm();
                     break;
                 case 6:
-                    quedarse=false;
+                    quedarse = false;
                     break;
             }
         } while (quedarse);

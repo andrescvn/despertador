@@ -8,7 +8,7 @@ package despertador;
 import java.time.LocalTime;
 
 /**
- * 
+ *
  * @author acomesanavila
  */
 public class Display {
@@ -18,17 +18,17 @@ public class Display {
     /**
      * show the hour
      */
-    public static void showHr() {   
-        System.out.println(LocalTime.now().getHour()+Reloj.hora.getHour()+":"+
-                (LocalTime.now().getMinute()+Reloj.hora.getMinute())+
-                ":"+ LocalTime.now().getSecond());
+    public static void showHr() {
+        System.out.println(LocalTime.now().getHour() + Reloj.hora.getHour() + ":"
+                + (LocalTime.now().getMinute() + Reloj.hora.getMinute())
+                + ":" + LocalTime.now().getSecond());
     }
 
     /**
      * show the alarm hour
      */
     public static void showAlarm() {
-        System.out.println(Reloj.alarma.getHour()+":"+Reloj.alarma.getMinute());
+        System.out.println(Reloj.alarma.getHour() + ":" + Reloj.alarma.getMinute());
     }
 
     /**

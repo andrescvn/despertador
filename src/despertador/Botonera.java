@@ -82,9 +82,11 @@ public class Botonera {
                 Reloj.hora = Reloj.hora.plusMinutes(1);
                 Display.showHr();
             }
-        } else if (Display.ledset == true) {
+        } else {
+            if (Display.ledset == true) {
             Reloj.alarma = Reloj.alarma.plusMinutes(1);
             Display.showAlarm();
+            }
         }
     }
 
@@ -97,9 +99,11 @@ public class Botonera {
                 Reloj.hora = Reloj.hora.plusHours(1);
                 Display.showHr();
             }
-        } else if (Display.ledset == true) {
+        } else{
+            if (Display.ledset == true) {
             Reloj.alarma = Reloj.alarma.plusHours(1);
             Display.showAlarm();
+        }
         }
     }
 

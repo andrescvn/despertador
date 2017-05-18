@@ -12,7 +12,7 @@ package despertador;
  */
 public class Altavoz {
 
-    static boolean ringON=true;
+    static boolean ringON = true;
     static String melodia = "ALARMA!!!!";
 
     /**

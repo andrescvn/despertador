@@ -77,15 +77,13 @@ public class Botonera {
      * increase the hour
      */
     public static void plusMin(String tiempo) {
-        if (tiempo.equals("hora")) {
-            if (Display.ledset == true) {
+        if (Display.ledset == true) {
+            if (tiempo.equals("hora")) {
                 Reloj.hora = Reloj.hora.plusMinutes(1);
                 Display.showHr();
-            }
-        } else {
-            if (Display.ledset == true) {
-            Reloj.alarma = Reloj.alarma.plusMinutes(1);
-            Display.showAlarm();
+            } else if (Display.ledset == true) {
+                Reloj.alarma = Reloj.alarma.plusMinutes(1);
+                Display.showAlarm();
             }
         }
     }
@@ -94,16 +92,15 @@ public class Botonera {
      * increase the minutes
      */
     public static void plushr(String tiempo) {
-        if (tiempo.equals("hora")) {
-            if (Display.ledset == true) {
+        if (Display.ledset == true) {
+            if (tiempo.equals("hora")) {
+
                 Reloj.hora = Reloj.hora.plusHours(1);
                 Display.showHr();
+            } else {
+                Reloj.alarma = Reloj.alarma.plusHours(1);
+                Display.showAlarm();
             }
-        } else{
-            if (Display.ledset == true) {
-            Reloj.alarma = Reloj.alarma.plusHours(1);
-            Display.showAlarm();
-        }
         }
     }
 
